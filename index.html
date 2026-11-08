@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora Inteligente</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <h1>CALCULADORA INTELIGENTE</h1>
+
+    <div class="conexion">
+
+        <h3>Vincular dispositivos</h3>
+
+        <input type="email" id="correo"
+               placeholder="Correo electrónico">
+
+        <input type="password" id="contrasena"
+               placeholder="Contraseña">
+
+        <button onclick="registrar()">
+            Crear cuenta
+        </button>
+
+        <button onclick="iniciarSesion()">
+            Iniciar sesión
+        </button>
+
+        <button onclick="cerrarSesion()">
+            Cerrar sesión
+        </button>
+
+        <p id="estadoConexion">
+            Esperando conexión...
+        </p>
+
+    </div>
+
+    <div class="calculadora">
+
+        <div class="pantalla" id="pantalla">
+            0
+        </div>
+
+        <div class="botones">
+
+            <button class="especial"
+                    onclick="limpiar()">AC</button>
+
+            <button class="especial"
+                    onclick="borrar()">DEL</button>
+
+            <button class="operador"
+                    onclick="elegirOperacion('/')">÷</button>
+
+            <button class="operador"
+                    onclick="elegirOperacion('*')">×</button>
+
+            <button onclick="agregarNumero('7')">7</button>
+            <button onclick="agregarNumero('8')">8</button>
+            <button onclick="agregarNumero('9')">9</button>
+
+            <button class="operador"
+                    onclick="elegirOperacion('-')">−</button>
+
+            <button onclick="agregarNumero('4')">4</button>
+            <button onclick="agregarNumero('5')">5</button>
+            <button onclick="agregarNumero('6')">6</button>
+
+            <button class="operador"
+                    onclick="elegirOperacion('+')">+</button>
+
+            <button onclick="agregarNumero('1')">1</button>
+            <button onclick="agregarNumero('2')">2</button>
+            <button onclick="agregarNumero('3')">3</button>
+
+            <button class="igual"
+                    onclick="calcular()">=</button>
+
+            <button class="cero"
+                    onclick="agregarNumero('0')">0</button>
+
+            <button onclick="agregarDecimal()">.</button>
+
+        </div>
+
+    </div>
+
+    <p class="pie">
+        Calculadora conectada a la nube
+    </p>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+<script src="calculadora.js"></script>
+
+</body>
+</html>
